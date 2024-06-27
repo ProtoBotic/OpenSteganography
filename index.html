@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Steganography</h1>
+        </header>
+        <div class="section" id="encodeSection">
+            <h2>Encode Data into Image</h2>
+            <div class="drop-zone" id="carrierImageDropZone">
+                <label for="carrierImage">Carrier Image (Click or Drop Here):</label>
+                <input type="file" id="carrierImage" accept="image/*">
+                <img id="carrierPreview" class="preview-image">
+                <p id="maxSize"></p>
+            </div>
+            <div class="drop-zone" id="fileToEncodeDropZone">
+                <label for="fileToEncode">File to Encode (Click or Drop Here):</label>
+                <input type="file" id="fileToEncode" accept=".png,.jpg,.jpeg,.txt,.mp4">
+                <div class="preview-container">
+                    <img id="filePreviewImage" class="preview-image">
+                    <video id="filePreviewVideo" controls class="preview-video"></video>
+                    <pre id="filePreviewText" class="preview-text"></pre>
+                    <p id="fileToEncodeInfo"></p>
+                </div>
+            </div>
+            <div id="encryptionOptions">
+                <label for="encryptionType">Encryption-Type:</label>
+                <select id="encryptionType">
+                    <option value="none">None</option>
+                    <option value="xor">XOR Cipher</option>
+                    <option value="vigenere">Vigenère Cipher</option>
+                </select>
+                <label for="encryptionPassword">Password:</label>
+                <input type="password" id="encryptionPassword" placeholder="Enter password">
+            </div>
+            <button id="encodeButton">Encode</button>
+            <a id="encodedImageDownload" style="display: none;">Download Encoded Image</a>
+        </div>
+        
+        <div class="section" id="decodeSection">
+            <h2>Decode Data from Image</h2>
+            <div class="drop-zone" id="imageToDecodeDropZone">
+                <label for="imageToDecode">Image to Decode (Click or Drop Here):</label>
+                <input type="file" id="imageToDecode" accept="image/*">
+                <img id="decodePreview" class="preview-image"><br>
+            </div>
+            <div id="decryptionOptions">
+                <label for="decryptionType">Decryption-Type:</label>
+                <select id="decryptionType">
+                    <option value="none">None</option>
+                    <option value="xor">XOR Cipher</option>
+                    <option value="vigenere">Vigenère Cipher</option>
+                </select>
+                <label for="decryptionPassword">Password:</label>
+                <input type="password" id="decryptionPassword" placeholder="Enter password">
+            </div>
+            <button id="decodeButton">Decode</button>
+            <div class="preview-container">
+                <img id="decodedPreviewImage" class="preview-image">
+                <video id="decodedPreviewVideo" controls class="preview-video"></video>
+                <pre id="decodedPreviewText" class="preview-text"></pre>
+            </div>
+            <a id="decodedFileDownload" style="display: none;">Download Decoded File</a>
+        </div>
+    </div>
+    <script src="steganography.js"></script>
+</body>
+
+</html>
