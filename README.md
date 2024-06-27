@@ -15,6 +15,7 @@ My program has/can:
 -Allow the user to Password Protect their data using various Encryption types before encoding it into images
 
 
+
 Features i intend to add eventaully...
 
 -Allow encoding into audio files (audio steganography)
