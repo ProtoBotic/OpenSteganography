@@ -1,5 +1,7 @@
 Steganography is the act of hiding data or files within other, harmless-looking data or files. Instead of encrypting the content to make it unreadable, steganography hides the existence of the message itself. It's like hiding a secret note inside an ordinary-looking letter so that only the intended recipient knows where to look and how to decode it.
 
+![Screenshot 2024-06-29 at 16-54-44 Image Steganography](https://github.com/ProtoBotic/OpenSteganography/assets/155253484/eb36a559-de4f-414b-8034-5fd2671fd34b)
+
 The program i created is an attempt at making Steganography more assesible to the average person by making the program more straight forward and easyer to use than other steganography programs.
 
 My program has/can:
